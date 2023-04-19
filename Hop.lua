@@ -27,7 +27,7 @@ menu.toggle_loop(menu.player_root(she),"Hop",{},"",function()
   end
 end)
 
-menu.toggle_loop(menu.my_root(),"height[her]",{},"",function()
+menu.toggle_loop(menu.player_root(she),"height[her]",{},"",function()
   local pos = ENTITY.GET_ENTITY_COORDS(ped)
 
    pos.z = math.floor(math.abs(pos.z * 3.28084 / 3) + 0.5)
@@ -53,4 +53,4 @@ menu.toggle_loop(menu.my_root(),"height",{},"",function()
 util.toast("Z/ "..pos.z)
   end
   pos2 = pos
-end)
+end)  
