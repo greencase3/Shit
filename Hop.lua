@@ -31,7 +31,7 @@ pos2 = ENTITY.GET_ENTITY_COORDS(players.user_ped())
 
 menu.toggle_loop(menu.my_root(),"print",{},"",function()
 
-  local pos = ENTITY.GET_ENTITY_COORDS(players.user_ped(),ped)
+  local pos = ENTITY.GET_ENTITY_COORDS(players.user_ped())
 
    pos.z = math.floor(math.abs(pos.z * 3.28084 / 3) + 0.5)
  if pos2.z ~= pos.z then
