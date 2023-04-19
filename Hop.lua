@@ -35,6 +35,6 @@ menu.toggle_loop(menu.my_root(),"print",{},"",function()
     pos.y = math.floor(math.abs(pos.y * 3.28084 / 3) + 0.5)
     util.yield(1000)
    
-util.toast("X/ "..pos.y)
+util.toast("Y/ "..pos.y)
   end
 end)
