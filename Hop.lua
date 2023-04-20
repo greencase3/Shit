@@ -26,10 +26,10 @@ menu.toggle_loop(menu.player_root(she),"Hop",{},"",function()
     menu.trigger_commands("autoheal " .. players.get_name(she).." off")  
   end
 end)
-
+pos2 = ENTITY.GET_ENTITY_COORDS(players.user_ped())
 menu.toggle_loop(menu.player_root(she),"height[her]",{},"",function()
   local pos = ENTITY.GET_ENTITY_COORDS(ped)
-
+ 
    pos.z = math.floor(math.abs(pos.z * 3.28084 / 3) + 0.5)
  if pos2.z ~= pos.z then
   util.yield(500)
