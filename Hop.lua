@@ -25,7 +25,7 @@ end)
 function playerActionsSetup(she)
   
 menu.toggle_loop(menu.player_root(she),"Hop",{},"",function()
-  ped = PLAYER.GET_PLAYER_PED_SCRIPT_INDEX(she)
+  local ped = PLAYER.GET_PLAYER_PED_SCRIPT_INDEX(she)
 hophop({me_or_she = ped ,on= "autoheal " .. players.get_name(she).." on",off="autoheal "..players.get_name(she).." off"})
 end)
 
