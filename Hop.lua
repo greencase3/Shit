@@ -22,10 +22,10 @@ menu.toggle_loop(menu.my_root(),"Hop-Self",{},"",function()
 hophop({me_or_she = players.user_ped(), on = "demigodmode on", off = "demigodmode off"})
 end)
 
-function playerActionsSetup(she)
+local function playerActionsSetup(she)
   
 menu.toggle_loop(menu.player_root(she),"Hop",{},"",function()
-  local ped = PLAYER.GET_PLAYER_PED_SCRIPT_INDEX(she)
+local ped = PLAYER.GET_PLAYER_PED_SCRIPT_INDEX(she)
 hophop({me_or_she = ped ,on= "autoheal " .. players.get_name(she).." on",off="autoheal "..players.get_name(she).." off"})
 end)
 
