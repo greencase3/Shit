@@ -1,7 +1,7 @@
 util.require_natives(1663599433)
 local Hop_Type = 0 
-menu.slider(menu.my_root(),"Hop Type",{"Hophophop"},"",0,82,13,1,function(value)
-       Hop_Type=value
+menu.slider(menu.my_root(),"Hop Type",{"Hophophop"},"",0,84,13,1,function(value)
+  Hop_Type=value
 end)
 
 local hophop = function (hop)
@@ -29,7 +29,6 @@ menu.toggle_loop(menu.player_root(she),"Hop",{},"",function()
 hophop({me_or_she = ped,on= "autoheal " .. players.get_name(she).." on",off="autoheal "..players.get_name(she).." off"})
 
 end)
-
 
 end players.on_join(playerActionsSetup)players.dispatch_on_join()
 util.keep_running()
