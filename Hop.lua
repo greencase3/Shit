@@ -15,7 +15,7 @@ local hophop = function (hop)
     end
   end
   
-  Hop_Type = 0 
+  Hop_Type =13 
   menu.slider(menu.my_root(),"Hop Type",{"Hophophop"},"",0,84,13,1,function(value)
     Hop_Type=value
   end)
