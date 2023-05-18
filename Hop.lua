@@ -15,7 +15,7 @@ local hophop = function (hop)
     end
   end
   
-  Hop_Type =13 
+  Hop_Type = 13 
   menu.slider(menu.my_root(),"Hop Type",{"Hophophop"},"",0,84,13,1,function(value)
     Hop_Type=value
   end)
@@ -23,7 +23,27 @@ local hophop = function (hop)
 menu.toggle_loop(menu.my_root(),"Hop-Self",{},"",function()
 hophop({me_or_she = players.user_ped(), on = "demigodmode on", off = "demigodmode off"})
 end)
+han = 8 
+menu.toggle_loop(menu.my_root(),"test",{},"",function()
+  local pos = ENTITY.GET_ENTITY_COORDS(players.user_ped())
 
+  local X = pos.x 
+  local Y = pos.y 
+  local points = 100
+
+  for i = 1, points do
+    util.yield()
+    local angle = (i / points) * 2 * math.pi 
+    local x = X + han * math.cos(angle)
+    local y = Y + han * math.sin(angle)
+
+    FIRE.ADD_EXPLOSION(x, y, pos.z, 70, 1.0, true, false, 0, false) 
+  end
+end)
+
+menu.slider(menu.my_root(),"value2",{"rara"},"",0,50,8,1,function(value2)
+ han=value2
+end)
   
 function playerActionsSetup(she)
 menu.toggle_loop(menu.player_root(she),"Hop",{},"",function()
